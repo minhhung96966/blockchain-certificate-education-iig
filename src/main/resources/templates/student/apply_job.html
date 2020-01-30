@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header-css"></head>
+<body>
+<div th:replace="fragments/header :: header"/></div>
+
+<div class="content">
+    <div class="wrap wrap-background">
+        <div class="row-content">
+            <div class="container">
+                <div class="row">
+                    <div class="column-content column-main">
+                        <div class="row content-header">
+                            <h4 class="page-title"><i class="fa fa-user" aria-hidden="true"></i>  Apply for a job</h4>
+                            <ol class="breadcrumb p-0 m-0">
+                                <li>
+                                    <a class="page-title-copy" href="#">Apply for a job</a>
+                                </li>
+                                <li class="active">
+                                    Home
+                                </li>
+                            </ol>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
+                            <div class="row">
+
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <label for="file_cv">Your CV</label>
+
+                                        <small class="text-muted"><span id="file_hash_show_cv"></span></small>
+
+                                        <input id="file_cv" type="file" class="file" name="file_cv"></input>
+                                        <input id="file_hash_cv" type="hidden" value=""></input>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="file_uit">Your UIT Certificate</label>
+
+                                        <small class="text-muted"><span id="file_hash_show_uit"></span></small>
+
+                                        <input id="file_uit" type="file" class="file" name="file_uit"></input>
+                                        <input id="file_hash_uit" type="hidden" value=""></input>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="file_iig">Your IIG Certificate</label>
+
+                                        <small class="text-muted"><span id="file_hash_show_iig"></span></small>
+
+                                        <input id="file_iig" type="file" class="file" name="file_iig"></input>
+                                        <input id="file_hash_iig" type="hidden" value=""></input>
+
+                                    </div>
+
+                                    <pre>
+                                        <span id="result"></span>
+                                    </pre>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <input type="hidden" id ="apply_time" name ="apply_time" value = ""></input>
+                                    <input type="hidden" id ="job_id" name ="job_id" value = ""></input>
+                                    <input type="hidden" id ="id" name ="id" value = ""></input>
+                                    <input type="hidden" id ="candidate_email" name ="candidate_email" value = ""></input>
+
+                                    <div class="form-group">
+                                        <label for="note">Note</label>
+                                        <textarea type="text" class="form-control" id="note" placeholder="" rows="6" name="note"></textarea>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="button-right">
+                                <button id="btn" type="button" class="btn btn-primary" onclick="applyJob()">Apply</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

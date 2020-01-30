@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BTCert Admin</title>
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+<!--    <link href="/admin/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap-table.min.css">
+
+    <link href="/admin/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sweetalert.css">
+    <link rel="stylesheet" href="../static/css/jquery.jsonview.css" th:href="@{/css/jquery.jsonview.css}">
+    <link href="/admin/css/style.css?v=4.1.0" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="../static/admin/js/jsonform.js" th:src="@{/admin/js/jsonform.js}"></script>
+    <script src="../static/admin/js/jsv.js" th:src="@{/admin/js/jsv.js}"></script>
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Certificate Template Management</h5>
+        </div>
+        <div class="ibox-content">
+            <div class="row row-lg">
+                <div class="col-sm-12">
+                    <div class="column-content column-main column-blue">
+                        <div id="toolbar" class="btn-group">
+                            <button id="btn_add" type="button" class="btn btn-default" onclick="addSelected()">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
+                            </button>
+                        </div>
+                        <div class="modal fade modal-edit" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="myModalLabel">Add new certificate template</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <form></form>
+                                            </div>
+                                            <div id="alert-message-success" class="alert alert-success" role="alert"  style="display:none;">
+                                                <i class="fa fa-check-circle"></i> Your new certificate template has been successfully added
+                                            </div>
+                                            <div id="alert-message-fail" class="alert alert-danger" role="alert" style="display:none;">
+                                                <i class="fa fa-times-circle"></i> Sorry, please check your form
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="accordion" th:each="certTempl : ${certsTempl}">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button
+                                                th:id="${certTempl.getTemplateId()}"
+
+                                                class="btn btn-link"
+                                                data-toggle="collapse"
+                                                data-target="#collapseOne"
+                                                aria-expanded="true"
+                                                aria-controls="collapseOne"
+                                                onclick="expandCertTemplate(this.id)">
+                                            ID - [[${certTempl.getTemplateId()}]]
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div th:id="${'data-' + certTempl.getTemplateId()}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div th:id="${'data-body-' + certTempl.getTemplateId()}" class="card-body">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../static/jslib/jquery.jsonview.js" th:src="@{/jslib/jquery.jsonview.js}"></script>
+
+
+<script>
+    function expandCertTemplate(id) {
+        $.getJSON("http://localhost:3002/api/CertificateTemplate/" + id, function(result) {
+            $('#data-body-' + id).JSONView({})
+            $('#data-body-' + id).JSONView(result, { collapsed: true });
+            $('#data-' + id).collapse('toggle');
+        });
+
+    }
+
+    $('form').jsonForm({
+        schema: {
+            $class: {
+                type: 'string',
+                title: '$class',
+                default: "org.degree.CertificateTemplate"
+            },
+            templateId: {
+                type: 'string',
+                title: 'Template Id',
+                required: true,
+                default: "123456"
+            },
+            typeC: {
+                type: 'string',
+                title: 'typeC',
+                default: "Assertion"
+            },
+            badge: {
+                type: "object",
+                title: "Badge",
+                properties: {
+                    $class: {
+                        type: 'string',
+                        title: '$class',
+                        default: "composer.blockcerts.Badge"
+                    },
+                    id: {
+                        type: "string",
+                        title: "Badge Id",
+                        default: "Badge Id"
+                    },
+                    typen: {
+                        type: "string",
+                        title: "Badge Typen",
+                        default: "BadgeClass"
+                    },
+                    name: {
+                        type: "string",
+                        title: "Badge Name",
+                        default: "Badge Name"
+                    },
+                    description: {
+                        type: "string",
+                        title: "Badge Description",
+                        default: "Badge Description"
+                    },
+                    issuer: {
+                        type: "object",
+                        title: "Issuer",
+                        properties: {
+                            $class: {
+                                type: 'string',
+                                title: '$class',
+                                default: "composer.blockcerts.Issuer"
+                            },
+                            id: {
+                                type: "string",
+                                title: "Issuer Id",
+                                default: "Issuer Id"
+                            },
+                            typen: {
+                                type: "string",
+                                title: "Issuer Typen",
+                                default: "Profile"
+                            },
+                            name: {
+                                type: "string",
+                                title: "Issuer Name",
+                                default: "Issuer Name"
+                            },
+                            urln: {
+                                type: "string",
+                                title: "Issuer Urln",
+                                default: "Issuer Urln"
+                            },
+                            email: {
+                                type: "string",
+                                title: "Issuer Email",
+                                default: "Issuer Email"
+                            },
+                            school: {
+                                type: "object",
+                                title: "School",
+                                properties: {
+                                    $class: {
+                                        type: 'string',
+                                        title: '$class',
+                                        default: "composer.blockcerts.School"
+                                    },
+                                    id: {
+                                        type: "string",
+                                        title: "School Id",
+                                        default: "School Id"
+                                    },
+                                    typen: {
+                                        type: "string",
+                                        title: "School Typen",
+                                        default: "School,Extension"
+                                    },
+                                    name: {
+                                        type: "string",
+                                        title: "School Name",
+                                        default: "School Name"
+                                    },
+                                    urln: {
+                                        type: "string",
+                                        title: "School Urln",
+                                        default: "School Urln"
+                                    },
+                                    email: {
+                                        type: "string",
+                                        title: "School Email",
+                                        default: "School Email"
+                                    },
+                                    image: {
+                                        type: "string",
+                                        title: "School Image",
+                                        default: "School Image"
+                                    }
+                                }
+                            },
+                            signatureLines: {
+                                type: "object",
+                                title: "SignatureLines",
+                                properties: {
+                                    $class: {
+                                        type: 'string',
+                                        title: '$class',
+                                        default: "composer.blockcerts.SignatureLines"
+                                    },
+                                    typen: {
+                                        type: "string",
+                                        title: "SignatureLines Typen",
+                                        default: "SignatureLine,Extension"
+                                    },
+                                    name: {
+                                        type: "string",
+                                        title: "SignatureLines Name",
+                                        default: "SignatureLines Name"
+                                    },
+                                    image: {
+                                        type: "string",
+                                        title: "SignatureLines Image",
+                                        default: "SignatureLines Image"
+                                    },
+                                    jobtitle: {
+                                        type: "string",
+                                        title: "SignatureLines Job Title",
+                                        default: "SignatureLines Job Title"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            context: {
+                type: 'string',
+                title: 'Context',
+                default: "https://w3id.org/openbadges/v2,https://w3id.org/blockcerts/v2"
+            },
+            revoked: {
+                type: 'boolean',
+                title: 'Revoked',
+                default: false
+            }
+        },
+        onSubmit: function (errors, values) {
+            if (errors) {
+                $("#alert-message-success").hide();
+                $("#alert-message-fail").fadeIn();
+            }
+            else {
+                console.log(values);
+                $.post('http://localhost:3002/api/CertificateTemplate', values, function(response) {
+                    if(response) {
+                        $("#alert-message-fail").hide();
+                        $("#alert-message-success").fadeIn();
+                        window.location.href = "/admin/certificate_template";
+                    }
+                }, 'json').fail(function(jqXHR, textStatus, error){
+                    console.log(jqXHR);
+                    console.log(textStatus);
+                    console.log(error);
+                    $("#alert-message-success").hide();
+                    $("#alert-message-fail").fadeIn();
+
+                });
+            }
+        }
+    });
+
+
+    function addSelected() {
+        $(".modal-edit").modal('show');
+    }
+
+</script>
+</body>
+
+</html>
+

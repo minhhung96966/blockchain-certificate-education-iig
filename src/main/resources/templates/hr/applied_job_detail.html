@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header-css"></head>
+<body>
+
+<div th:replace="fragments/header :: header"/></div>
+
+<div class="content">
+    <div class="wrap wrap-background">
+        <div class="row-content">
+            <div class="container">
+                <div class="row">
+                    <div class="column-content column-main">
+                        <div class="row content-header">
+                            <h4 class="page-title"><i class="fa fa-user" aria-hidden="true"></i>  Check the applied job detail</h4>
+                            <ol class="breadcrumb p-0 m-0">
+                                <li>
+                                    <a class="page-title-copy" href="#">Check the applied job detail</a>
+                                </li>
+                                <li class="active">
+                                    Home
+                                </li>
+                            </ol>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="panel">
+
+
+
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a href="#home">Student Applied Job Information</a></li>
+                                <li><a href="#verify">Verify certificate</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="home">
+
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-primary" onclick="downloadCV()">Download CV</button>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-primary" onclick="downloadCertUIT()">Download Certificate UIT</button>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-primary" onclick="downloadCertIIG()">Download Certificate IIG</button>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="note">Note from candidate</label>
+                                            <textarea type="text" class="form-control" id ="note" name="note" rows="6" readonly></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane" id="verify">
+
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <button id="btn-verifyUIT" type="button" class="btn btn-primary" onclick="verifyCertUIT()">Verify Certificate UIT</button>
+                                        </div>
+
+                                        <div class="container-fluid">
+                                            <div id="list" >
+                                                <table class="table table-striped table-hover">
+                                                    <tbody id = "resultTableUIT">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <button id="btn-verifyIIG" type="button" class="btn btn-primary" onclick="verifyCertIIG()">Verify Certificate IIG</button>
+                                        </div>
+
+                                        <div class="container-fluid">
+                                            <div id="list" >
+                                                <table class="table table-striped table-hover">
+                                                    <tbody id = "resultTableIIG">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="button-right">
+                                <button type="button" class="btn btn-success" onclick="checkAppliedJob('passed')">Approved</button>
+                                <button type="button" class="btn btn-danger" onclick="checkAppliedJob('rejected')">Rejected</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

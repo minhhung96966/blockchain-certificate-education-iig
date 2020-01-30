@@ -1,0 +1,505 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+</head>
+<body>
+<div th:fragment="footer">
+  <div class="footer">
+	<div class="container">
+		<div class="row row-p	b-md">
+			<div class="col-md-4">
+				<div class="gtco-widget">
+					<h3 data-lang="footer-about-us">ABOUT</h3>
+					<p data-lang="footer-about-us-des" style = "color:#ddd">
+						<!-- This is a system using the <a style = "color:#996671" href = "https://en.wikipedia.org/wiki/Blockchain">blockchain</a> and strong
+						<a style = "color:#996671" href = "https://en.wikipedia.org/wiki/Cryptography">cryptography</a> to create a certification infrastructure,
+						which protecting authentic credential certification and reputation appear. -->
+
+						This system authenticates academic credentials by means of a digital
+						receipt that allows immediate verification by third parties.
+												BTCerts uses <a href="https://en.wikipedia.org/wiki/Blockchain"
+						style="color:#996671">blockchain</a> and
+												<a href="https://en.wikipedia.org/wiki/Hyperledger"
+						style="color:#996671">hyperledger</a> technologies to create a
+												certification infrastructure based on the <a
+						href="#" style="color:#996671">blockcerts</a>
+						standard.
+
+
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-md-push-1">
+				<div class="gtco-widget">
+					<h3 data-lang="footer-links">LINKS</h3>
+					<ul class="gtco-footer-links">
+						<li><a href="#" data-lang="footer-links-1">Privacy Policy</a></li>
+						<li><a href="#" data-lang="footer-links-2">Cookie Policy </a></li>
+						<li><a href="#" data-lang="footer-links-3">Terms and Conditions</a></li>
+						<li><a href="#" data-lang="footer-links-4">Q &#38; A</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="gtco-widget">
+					<h3 data-lang="footer-touch">CONTACT</h3>
+					<ul class="gtco-quick-contact">
+					    <li> <a href = "https://www.facebook.com/hungit2014"> Nguyen Minh Hung </a> </li>
+						<li> Nguyen Hoai Nam </li>
+						<li> University of Information Technologies </li>
+						<li> Viet Nam </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row copyright">
+			<div class="col-md-12">
+				<p class="pull-left">
+					<small class="block">© 2019 IT University of Information Technologies. All Rights Reserved.</small>
+				</p>
+				<p class="pull-right">
+				</p>
+				<ul class="gtco-social-icons pull-right">
+					<li><a href="#"><i class="icon-github"></i></a></li>
+					<li><a href="#"><i class="icon-facebook"></i></a></li>
+					<li><a href="#"><i class="icon-linkedin"></i></a></li>
+					<li><a href="#"><i class="icon-dribbble"></i></a></li>
+				</ul>
+				<p>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- login -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('login')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+	<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+</div>
+
+<!-- home -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('/home')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+	<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+</div>
+
+<!-- ********************************student******************************************* -->
+
+<!-- revoked_certificate -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('revoked_certificate')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+     <script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+    <script src="../static/jslib/qrcode.js" th:src="@{/jslib/qrcode.js}"></script>
+    <script src="../static/jslib/qcode-decoder.min.js" th:src="@{/jslib/qcode-decoder.min.js}"></script>
+    <script src="../static/jslib/jquery.jsonview.js" th:src="@{/jslib/jquery.jsonview.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/student-revoked-certificate.js" th:src="@{/js/student-revoked-certificate.js}"></script>
+</div>
+
+<!-- issued_certificate -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('issued_certificate')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+    <script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+    <script src="../static/jslib/qrcode.js" th:src="@{/jslib/qrcode.js}"></script>
+    <script src="../static/jslib/qcode-decoder.min.js" th:src="@{/jslib/qcode-decoder.min.js}"></script>
+    <script src="../static/jslib/jquery.jsonview.js" th:src="@{/jslib/jquery.jsonview.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+
+    <script src="../static/js/student-issued-certificate.js" th:src="@{/js/student-issued-certificate.js}"></script>
+</div>
+
+
+<!-- student_home -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('student_home')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+	<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+	 <script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+	<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+	<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+	<script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+<!--	<script src="../static/jslib/jquery.datetimepicker.min.js" th:src="@{/jslib/jquery.datetimepicker.min.js}"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.js"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+	<script src="../static/js/student.js" th:src="@{/js/student.js}"></script>
+	<script src="../static/jslib/fileinput.min.js" th:src="@{/jslib/fileinput.min.js}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.28.5/date_fns.min.js"></script>
+	<script src="../static/jslib/pikaday.js" th:src="@{/jslib/pikaday.js}"></script>
+</div>
+
+<!-- apply_history -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('apply_history')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+	<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/student-history.js" th:src="@{/js/student-history.js}"></script>
+    <script src="../static/jslib/fileinput.min.js" th:src="@{/jslib/fileinput.min.js}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.28.5/date_fns.min.js"></script>
+    <script src="../static/jslib/pikaday.js" th:src="@{/jslib/pikaday.js}"></script>
+</div>
+
+<!-- apply_form -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('apply_form')}">
+    <script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+     <script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/student.js" th:src="@{/js/student.js}"></script>
+    <script src="../static/jslib/fileinput.min.js" th:src="@{/jslib/fileinput.min.js}"></script>
+    <script src="../static/jslib/date_fns.min.js" th:src="@{/jslib/date_fns.min.js}"></script>
+    <script src="../static/jslib/pikaday.js" th:src="@{/jslib/pikaday.js}"></script>
+</div>
+
+<!-- apply_job -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('apply_job')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+	<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+	<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+	<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+	<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+	<script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+	<script src="../static/js/student-apply-job.js" th:src="@{/js/student-apply-job.js}"></script>
+	<script src="../static/jslib/fileinput.min.js" th:src="@{/jslib/fileinput.min.js}"></script>
+	<script src="../static/jslib/date_fns.min.js" th:src="@{/jslib/date_fns.min.js}"></script>
+	<script src="../static/jslib/pikaday.js" th:src="@{/jslib/pikaday.js}"></script>
+</div>
+
+<!-- ********************************checker******************************************* -->
+
+<!-- checked_history_list -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('checked_history_list')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+	<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+	<script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+	<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+	<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+	<script src="../static/jslib/jquery.jsonview.js" th:src="@{/jslib/jquery.jsonview.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/checked-history-list.js" th:src="@{/js/checked-history-list.js}"></script>
+</div>
+
+<!-- unchecked_list -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('unchecked_list')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+	<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+	<script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+	<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+	<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+	<script src="../static/jslib/jquery.jsonview.js" th:src="@{/jslib/jquery.jsonview.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/checker-unchecked-list.js" th:src="@{/js/checker-unchecked-list.js}"></script>
+</div>
+
+<!-- checker_form -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('checker_form')}">
+    <script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+     <script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+    <script src="../static/jslib/date_fns.min.js" th:src="@{/jslib/date_fns.min.js}"></script>
+    <script src="../static/jslib/pikaday.js" th:src="@{/jslib/pikaday.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/checker-form.js" th:src="@{/js/checker-form.js}"></script>
+</div>
+
+<!-- checker_home -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('checker_home')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+	<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+	<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+	<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+	<script src="../static/js/checker.js" th:src="@{/js/checker.js}"></script>
+</div>
+
+<!-- checker/merged_certificate_list -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('checker/merged_certificate_list')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+     <script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+    <script src="../static/jslib/qrcode.js" th:src="@{/jslib/qrcode.js}"></script>
+    <script src="../static/jslib/qcode-decoder.min.js" th:src="@{/jslib/qcode-decoder.min.js}"></script>
+    <script src="../static/jslib/jquery.jsonview.js" th:src="@{/jslib/jquery.jsonview.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/checker-merged-certificate-list.js" th:src="@{/js/checker-merged-certificate-list.js}"></script>
+</div>
+
+<!-- unmerged_certificate_list -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('unmerged_certificate_list')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+     <script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+    <script src="../static/jslib/jsbn.js" th:src="@{/jslib/jsbn.js}"></script>
+<!--	<script src="../static/jslib/jsencrypt.min.js" th:src="@{/jslib/jsencrypt.min.js}"></script>-->
+	<script src="../static/jslib/ellipticcurve.js" th:src="@{/jslib/ellipticcurve.js}"></script>
+	<script src="../static/jslib/ripemd160.js" th:src="@{/jslib/ripemd160.js}"></script>
+	<script src="../static/jslib/sha512.js" th:src="@{/jslib/sha512.js}"></script>
+	<script src="../static/jslib/crypto-sha256.js" th:src="@{/jslib/crypto-sha256.js}"></script>
+	<script src="../static/js/btcert.js" th:src="@{/js/btcert.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/checker-unmerged-certificate-list.js" th:src="@{/js/checker-unmerged-certificate-list.js}"></script>
+</div>
+
+<!-- ********************************issuer******************************************* -->
+
+<!-- issuer/confirmed_revocation_list -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('issuer/confirmed_revocation_list')}">
+	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+	<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/issuer-confirmed-revocation-list.js"></script>
+</div>
+
+<!-- issuer_home -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('issuer_home')}">
+    <script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+	<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+    <script src="../static/jslib/jsbn.js" th:src="@{/jslib/jsbn.js}"></script>
+<!--	<script src="../static/jslib/jsencrypt.min.js" th:src="@{/jslib/jsencrypt.min.js}"></script>-->
+	<script src="../static/jslib/ellipticcurve.js" th:src="@{/jslib/ellipticcurve.js}"></script>
+	<script src="../static/jslib/ripemd160.js" th:src="@{/jslib/ripemd160.js}"></script>
+	<script src="../static/jslib/sha512.js" th:src="@{/jslib/sha512.js}"></script>
+	<script src="../static/jslib/crypto-sha256.js" th:src="@{/jslib/crypto-sha256.js}"></script>
+	<script src="../static/jslib/shieldui-all.min.js" th:src="@{/jslib/shieldui-all.min.js}"></script>
+	<script src="../static/js/btcert.js" th:src="@{/js/btcert.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+	<script src="../static/js/issuer.js" th:src="@{/js/issuer.js}"></script>
+</div>
+
+<!-- issuer/signed_transaction_list -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('issuer/signed_transaction_list')}">
+  	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+	<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/issuer-signed-transaction-list.js" th:src="@{/js/issuer-signed-transaction-list.js}"></script>
+</div>
+
+<!-- issuer/unconfirmed_revocation_list -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('issuer/unconfirmed_revocation_list')}">
+    <script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+	<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+    <script src="../static/jslib/jsbn.js" th:src="@{/jslib/jsbn.js}"></script>
+	<script src="../static/jslib/crypto-sha256.js" th:src="@{/jslib/crypto-sha256.js}"></script>
+	<script src="../static/jslib/crypto-sha256-hmac.js" th:src="@{/jslib/crypto-sha256-hmac.js}"></script>
+	<script src="../static/jslib/ellipticcurve.js" th:src="@{/jslib/ellipticcurve.js}"></script>
+	<script src="../static/jslib/ripemd160.js" th:src="@{/jslib/ripemd160.js}"></script>
+	<script src="../static/jslib/sha512.js" th:src="@{/jslib/sha512.js}"></script>
+	<script src="../static/jslib/coin.js" th:src="@{/jslib/coin.js}"></script>
+	<script src="../static/js/btcert.js" th:src="@{/js/btcert.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/issuer-unconfirmed-revocation-list.js" th:src="@{/js/issuer-unconfirmed-revocation-list.js}"></script>
+</div>
+
+
+
+
+<!-- unserialized_transaction_list -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('unserialized_transaction_list')}">
+  	<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+	<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+    <script src="../static/jslib/jsbn.js" th:src="@{/jslib/jsbn.js}"></script>
+<!--	<script src="../static/jslib/jsencrypt.min.js" th:src="@{/jslib/jsencrypt.min.js}"></script>-->
+	<script src="../static/jslib/ellipticcurve.js" th:src="@{/jslib/ellipticcurve.js}"></script>
+	<script src="../static/jslib/ripemd160.js" th:src="@{/jslib/ripemd160.js}"></script>
+	<script src="../static/jslib/sha512.js" th:src="@{/jslib/sha512.js}"></script>
+	<script src="../static/jslib/crypto-sha256.js" th:src="@{/jslib/crypto-sha256.js}"></script>
+	<script src="../static/js/btcert.js" th:src="@{/js/btcert.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/issuer-unserialized-transaction-list.js" th:src="@{/js/issuer-unserialized-transaction-list.js}"></script>
+</div>
+
+<!-- unsigned_transaction_list -->
+<div th:if="${#httpServletRequest.requestURL.toString().contains('unsigned_transaction_list')}">
+    <script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+    <script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+    <script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+	<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+    <script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+    <script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+    <script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+    <script src="../static/jslib/jsbn.js" th:src="@{/jslib/jsbn.js}"></script>
+	<script src="../static/jslib/crypto-sha256.js" th:src="@{/jslib/crypto-sha256.js}"></script>
+	<script src="../static/jslib/crypto-sha256-hmac.js" th:src="@{/jslib/crypto-sha256-hmac.js}"></script>
+	<script src="../static/jslib/ellipticcurve.js" th:src="@{/jslib/ellipticcurve.js}"></script>
+	<script src="../static/jslib/ripemd160.js" th:src="@{/jslib/ripemd160.js}"></script>
+	<script src="../static/jslib/sha512.js" th:src="@{/jslib/sha512.js}"></script>
+	<script src="../static/jslib/coin.js" th:src="@{/jslib/coin.js}"></script>
+	<script src="../static/js/btcert.js" th:src="@{/js/btcert.js}"></script>
+	<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script src="../static/js/issuer-unsigned-transaction-list.js" th:src="@{/js/issuer-unsigned-transaction-list.js}"></script>
+</div>
+
+	<!-- issuer/broadcasted_certificate_list -->
+	<div th:if="${#httpServletRequest.requestURL.toString().contains('issuer/broadcasted_certificate_list')}">
+		<script src="../static/jslib/pdfobject.min.js" th:src="@{/jslib/pdfobject.min.js}"></script>
+		<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+		<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+		<script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+		<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+		<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+		<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+		<script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+		<script src="../static/jslib/qrcode.js" th:src="@{/jslib/qrcode.js}"></script>
+		<script src="../static/jslib/jquery.qrcode.min.js" th:src="@{/jslib/jquery.qrcode.min.js}"></script>
+		<script src="../static/jslib/qcode-decoder.min.js" th:src="@{/jslib/qcode-decoder.min.js}"></script>
+		<script src="../static/jslib/jquery.jsonview.js" th:src="@{/jslib/jquery.jsonview.js}"></script>
+		<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+		<script src="../static/js/issuer-broadcasted-certificate-list.js" th:src="@{/js/issuer-broadcasted-certificate-list.js}"></script>
+	</div>
+
+	<!-- unbroadcasted_certificate_list -->
+	<div th:if="${#httpServletRequest.requestURL.toString().contains('issuer/unbroadcasted_certificate_list')}">
+		<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+		<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+		<script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+		<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+		<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+		<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+		<script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+		<script src="../static/jslib/jsbn.js" th:src="@{/jslib/jsbn.js}"></script>
+		<!--	<script src="../static/jslib/jsencrypt.min.js" th:src="@{/jslib/jsencrypt.min.js}"></script>-->
+		<script src="../static/jslib/ellipticcurve.js" th:src="@{/jslib/ellipticcurve.js}"></script>
+		<script src="../static/jslib/ripemd160.js" th:src="@{/jslib/ripemd160.js}"></script>
+		<script src="../static/jslib/sha512.js" th:src="@{/jslib/sha512.js}"></script>
+		<script src="../static/jslib/crypto-sha256.js" th:src="@{/jslib/crypto-sha256.js}"></script>
+		<script src="../static/jslib/jquery.jsonview.js" th:src="@{/jslib/jquery.jsonview.js}"></script>
+		<script src="../static/js/btcert.js" th:src="@{/js/btcert.js}"></script>
+		<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+		<script src="../static/js/issuer-unbroadcasted-certificate-list.js" th:src="@{/js/issuer-unbroadcasted-certificate-list.js}"></script>
+	</div>
+
+	<!-- ********************************hr******************************************* -->
+	<!-- hr_home -->
+	<div th:if="${#httpServletRequest.requestURL.toString().contains('hr_home')}">
+		<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+		<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+		<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+		<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+		<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+		<script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+		<!--	<script src="../static/jslib/jquery.datetimepicker.min.js" th:src="@{/jslib/jquery.datetimepicker.min.js}"></script>-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.js"></script>
+		<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+		<script src="../static/js/hr.js" th:src="@{/js/hr.js}"></script>
+		<script src="../static/jslib/fileinput.min.js" th:src="@{/jslib/fileinput.min.js}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.28.5/date_fns.min.js"></script>
+		<script src="../static/jslib/pikaday.js" th:src="@{/jslib/pikaday.js}"></script>
+	</div>
+
+	<div th:if="${#httpServletRequest.requestURL.toString().contains('hr_jobs')}">
+		<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+		<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+		<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+		<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+		<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+		<script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+		<!--	<script src="../static/jslib/jquery.datetimepicker.min.js" th:src="@{/jslib/jquery.datetimepicker.min.js}"></script>-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.js"></script>
+		<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+		<script src="../static/js/hr.js" th:src="@{/js/hr.js}"></script>
+		<script src="../static/jslib/fileinput.min.js" th:src="@{/jslib/fileinput.min.js}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.28.5/date_fns.min.js"></script>
+		<script src="../static/jslib/pikaday.js" th:src="@{/jslib/pikaday.js}"></script>
+	</div>
+
+	<!-- job_form -->
+	<div th:if="${#httpServletRequest.requestURL.toString().contains('job_form')}">
+		<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+		<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+		<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+		<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+		<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+		<script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+		<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+		<script src="../static/js/hr.js" th:src="@{/js/hr.js}"></script>
+		<script src="../static/jslib/fileinput.min.js" th:src="@{/jslib/fileinput.min.js}"></script>
+		<script src="../static/jslib/date_fns.min.js" th:src="@{/jslib/date_fns.min.js}"></script>
+		<script src="../static/jslib/pikaday.js" th:src="@{/jslib/pikaday.js}"></script>
+	</div>
+
+
+	<!-- applied_job -->
+	<div th:if="${#httpServletRequest.requestURL.toString().contains('applied_job')}">
+		<div th:if="${#httpServletRequest.requestURL.toString().contains('applied_job_detail') == false}">
+			<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+			<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+			<script src="../static/jslib/bootstrap-table.min.js" th:src="@{/jslib/bootstrap-table.min.js}"></script>
+			<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+			<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+			<script src="../static/jslib/jquery.jsonview.js" th:src="@{/jslib/jquery.jsonview.js}"></script>
+			<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+			<script src="../static/js/hr-applied-job.js" th:src="@{/js/hr-applied-job.js}"></script>
+		</div>
+	</div>
+
+	<!-- applied_job_detail -->
+	<div th:if="${#httpServletRequest.requestURL.toString().contains('applied_job_detail')}">
+		<script src="../static/jslib/jquery-3.2.1.min.js" th:src="@{/jslib/jquery-3.2.1.min.js}"></script>
+		<script src="../static/jslib/bootstrap.min.js" th:src="@{/jslib/bootstrap.min.js}"></script>
+		<script src="../static/jslib/spark-md5.min.js" th:src="@{/jslib/spark-md5.min.js}"></script>
+		<script src="../static/jslib/crypto-min.js" th:src="@{/jslib/crypto-min.js}"></script>
+		<script src="../static/jslib/jquery.base64.js" th:src="@{/jslib/jquery.base64.js}"></script>
+		<script src="../static/jslib/sweetalert.min.js" th:src="@{/jslib/sweetalert.min.js}"></script>
+		<script src="../static/jslib/date_fns.min.js" th:src="@{/jslib/date_fns.min.js}"></script>
+		<script src="../static/jslib/pikaday.js" th:src="@{/jslib/pikaday.js}"></script>
+		<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+		<script src="../static/js/hr-applied-job-detail.js" th:src="@{/js/hr-applied-job-detail.js}"></script>
+	</div>
+</div>
+</body>
+</html>

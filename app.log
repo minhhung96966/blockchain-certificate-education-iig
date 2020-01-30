@@ -1,0 +1,856 @@
+2019-11-25 00:00:43.755  INFO 18712 --- [http-nio-8080-exec-9] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:03:48.715  INFO 18712 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:03:48.716  INFO 18712 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:03:48.720  INFO 18712 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:03:48.723  INFO 18712 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:03:50.779  INFO 19285 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 19285 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:03:50.782  INFO 19285 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:03:51.256  INFO 19285 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:03:51.298  INFO 19285 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 1 repository interfaces.
+2019-11-25 00:03:51.725  INFO 19285 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:03:51.956  INFO 19285 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:03:51.963  INFO 19285 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:03:51.963  INFO 19285 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:03:52.015  INFO 19285 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:03:52.015  INFO 19285 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1188 ms
+2019-11-25 00:03:52.095  INFO 19285 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:03:52.150  INFO 19285 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:03:52.237  INFO 19285 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:03:52.293  INFO 19285 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:03:52.449  INFO 19285 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:03:52.575  INFO 19285 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:03:53.105  INFO 19285 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:03:53.118  INFO 19285 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:03:53.176  WARN 19285 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:03:53.506  INFO 19285 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:03:53.506  INFO 19285 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:03:53.506  INFO 19285 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:03:53.506  INFO 19285 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:03:53.506  INFO 19285 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:03:53.506  INFO 19285 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:03:53.506  INFO 19285 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:03:53.506  INFO 19285 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:03:53.532  INFO 19285 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25ea068e, org.springframework.security.web.context.SecurityContextPersistenceFilter@6a552721, org.springframework.security.web.header.HeaderWriterFilter@1ab268bd, org.springframework.security.web.authentication.logout.LogoutFilter@2bc59ab7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7252bdb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24dc150c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b62475a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cd8db31, org.springframework.security.web.session.SessionManagementFilter@181098bf, org.springframework.security.web.access.ExceptionTranslationFilter@65da4a5d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5bad555b]
+2019-11-25 00:03:53.638  INFO 19285 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:03:53.938  INFO 19285 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:03:53.940  INFO 19285 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 3.523 seconds (JVM running for 3.999)
+2019-11-25 00:04:29.273  INFO 19285 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:04:29.273  INFO 19285 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:04:29.280  INFO 19285 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-11-25 00:04:36.542  INFO 19285 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:09:21.353  INFO 19285 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:09:21.354  INFO 19285 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:09:21.356  INFO 19285 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:09:21.358  INFO 19285 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:09:23.995  INFO 19740 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 19740 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:09:23.997  INFO 19740 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:09:24.462  INFO 19740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:09:24.505  INFO 19740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33ms. Found 1 repository interfaces.
+2019-11-25 00:09:24.959  INFO 19740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:09:25.170  INFO 19740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:09:25.181  INFO 19740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:09:25.181  INFO 19740 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:09:25.258  INFO 19740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:09:25.258  INFO 19740 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1201 ms
+2019-11-25 00:09:25.355  INFO 19740 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:09:25.411  INFO 19740 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:09:25.494  INFO 19740 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:09:25.547  INFO 19740 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:09:25.710  INFO 19740 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:09:25.785  INFO 19740 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:09:26.288  INFO 19740 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:09:26.295  INFO 19740 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:09:26.325  WARN 19740 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:09:26.697  INFO 19740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:09:26.697  INFO 19740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:09:26.698  INFO 19740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:09:26.698  INFO 19740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:09:26.698  INFO 19740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:09:26.698  INFO 19740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:09:26.698  INFO 19740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:09:26.698  INFO 19740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:09:26.723  INFO 19740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c89b864, org.springframework.security.web.context.SecurityContextPersistenceFilter@7544260a, org.springframework.security.web.header.HeaderWriterFilter@2932e15f, org.springframework.security.web.authentication.logout.LogoutFilter@395eb363, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45e69324, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@506b083, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27b490de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3400d6fa, org.springframework.security.web.session.SessionManagementFilter@2375a976, org.springframework.security.web.access.ExceptionTranslationFilter@5b88af70, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1aa59698]
+2019-11-25 00:09:26.844  INFO 19740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:09:27.022  INFO 19740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:09:27.024  INFO 19740 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 3.368 seconds (JVM running for 3.867)
+2019-11-25 00:09:33.256  INFO 19740 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:09:33.257  INFO 19740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:09:33.266  INFO 19740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-11-25 00:09:39.041  INFO 19740 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:13:06.206  INFO 19740 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:13:06.208  INFO 19740 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:13:06.209  INFO 19740 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:13:06.214  INFO 19740 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:13:08.793  INFO 20067 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 20067 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:13:08.796  INFO 20067 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:13:09.292  INFO 20067 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:13:09.340  INFO 20067 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 1 repository interfaces.
+2019-11-25 00:13:09.745  INFO 20067 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:13:09.911  INFO 20067 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:13:09.918  INFO 20067 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:13:09.918  INFO 20067 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:13:09.985  INFO 20067 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:13:09.985  INFO 20067 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1143 ms
+2019-11-25 00:13:10.076  INFO 20067 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:13:10.136  INFO 20067 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:13:10.227  INFO 20067 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:13:10.292  INFO 20067 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:13:10.450  INFO 20067 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:13:10.527  INFO 20067 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:13:11.018  INFO 20067 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:13:11.025  INFO 20067 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:13:11.052  WARN 20067 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:13:11.380  INFO 20067 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:13:11.381  INFO 20067 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:13:11.381  INFO 20067 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:13:11.381  INFO 20067 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:13:11.381  INFO 20067 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:13:11.381  INFO 20067 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:13:11.381  INFO 20067 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:13:11.381  INFO 20067 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:13:11.405  INFO 20067 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f428e6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@2095c331, org.springframework.security.web.header.HeaderWriterFilter@578d472a, org.springframework.security.web.authentication.logout.LogoutFilter@6207145c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@24d7657b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b795db7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55f6f965, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72e49f6a, org.springframework.security.web.session.SessionManagementFilter@54b2d002, org.springframework.security.web.access.ExceptionTranslationFilter@7296fe0b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3595086b]
+2019-11-25 00:13:11.507  INFO 20067 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:13:11.689  INFO 20067 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:13:11.691  INFO 20067 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 3.212 seconds (JVM running for 3.692)
+2019-11-25 00:13:17.760  INFO 20067 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:13:17.761  INFO 20067 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:13:17.769  INFO 20067 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-11-25 00:13:24.632  INFO 20067 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:15:05.922  INFO 20067 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:16:44.454  INFO 20067 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:16:44.455  INFO 20067 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:16:44.458  INFO 20067 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:16:44.461  INFO 20067 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:16:46.559  INFO 20432 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 20432 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:16:46.565  INFO 20432 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:16:47.344  INFO 20432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:16:47.423  INFO 20432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 1 repository interfaces.
+2019-11-25 00:16:47.871  INFO 20432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:16:48.051  INFO 20432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:16:48.058  INFO 20432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:16:48.058  INFO 20432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:16:48.105  INFO 20432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:16:48.105  INFO 20432 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1458 ms
+2019-11-25 00:16:48.175  INFO 20432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:16:48.227  INFO 20432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:16:48.305  INFO 20432 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:16:48.359  INFO 20432 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:16:48.503  INFO 20432 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:16:48.590  INFO 20432 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:16:49.246  INFO 20432 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:16:49.252  INFO 20432 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:16:49.278  WARN 20432 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:16:49.690  INFO 20432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:16:49.691  INFO 20432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:16:49.691  INFO 20432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:16:49.691  INFO 20432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:16:49.691  INFO 20432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:16:49.691  INFO 20432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:16:49.691  INFO 20432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:16:49.691  INFO 20432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:16:49.716  INFO 20432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ae2c01b, org.springframework.security.web.context.SecurityContextPersistenceFilter@b849fa6, org.springframework.security.web.header.HeaderWriterFilter@2095c331, org.springframework.security.web.authentication.logout.LogoutFilter@670c171c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@312819ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e9ea32f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ff8e744, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1cab19e2, org.springframework.security.web.session.SessionManagementFilter@7b795db7, org.springframework.security.web.access.ExceptionTranslationFilter@54b2d002, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f0e7fa8]
+2019-11-25 00:16:49.818  INFO 20432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:16:50.014  INFO 20432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:16:50.016  INFO 20432 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 3.777 seconds (JVM running for 4.27)
+2019-11-25 00:17:35.032  INFO 20432 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:17:35.033  INFO 20432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:17:35.039  INFO 20432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-11-25 00:17:40.481  INFO 20432 --- [http-nio-8080-exec-3] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:18:09.047  INFO 20432 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:18:09.048  INFO 20432 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:18:09.050  INFO 20432 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:18:09.053  INFO 20432 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:18:11.746  INFO 20622 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 20622 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:18:11.749  INFO 20622 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:18:12.357  INFO 20622 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:18:12.414  INFO 20622 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 1 repository interfaces.
+2019-11-25 00:18:12.857  INFO 20622 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:18:13.043  INFO 20622 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:18:13.049  INFO 20622 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:18:13.049  INFO 20622 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:18:13.102  INFO 20622 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:18:13.103  INFO 20622 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1306 ms
+2019-11-25 00:18:13.172  INFO 20622 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:18:13.224  INFO 20622 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:18:13.314  INFO 20622 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:18:13.367  INFO 20622 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:18:13.502  INFO 20622 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:18:13.578  INFO 20622 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:18:14.040  INFO 20622 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:18:14.046  INFO 20622 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:18:14.075  WARN 20622 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:18:14.416  INFO 20622 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:18:14.416  INFO 20622 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:18:14.416  INFO 20622 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:18:14.417  INFO 20622 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:18:14.417  INFO 20622 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:18:14.417  INFO 20622 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:18:14.417  INFO 20622 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:18:14.417  INFO 20622 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:18:14.442  INFO 20622 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a41caed, org.springframework.security.web.context.SecurityContextPersistenceFilter@18d22ecf, org.springframework.security.web.header.HeaderWriterFilter@5814b4fb, org.springframework.security.web.authentication.logout.LogoutFilter@28e91f6d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e7d0db2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31443680, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@93fb44, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b4fd7d, org.springframework.security.web.session.SessionManagementFilter@4ba13fed, org.springframework.security.web.access.ExceptionTranslationFilter@5724c7da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@614cd187]
+2019-11-25 00:18:14.545  INFO 20622 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:18:14.766  INFO 20622 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:18:14.768  INFO 20622 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 3.451 seconds (JVM running for 3.994)
+2019-11-25 00:20:25.194  INFO 20622 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:20:25.194  INFO 20622 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:20:25.205  INFO 20622 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-11-25 00:20:29.981  INFO 20622 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:20:56.392  INFO 20622 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:20:56.393  INFO 20622 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:20:56.395  INFO 20622 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:20:56.397  INFO 20622 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:20:58.962  INFO 20930 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 20930 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:20:58.966  INFO 20930 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:20:59.394  INFO 20930 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:20:59.437  INFO 20930 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
+2019-11-25 00:20:59.818  INFO 20930 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:20:59.998  INFO 20930 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:21:00.004  INFO 20930 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:21:00.005  INFO 20930 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:21:00.054  INFO 20930 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:21:00.054  INFO 20930 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1041 ms
+2019-11-25 00:21:00.127  INFO 20930 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:21:00.181  INFO 20930 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:21:00.269  INFO 20930 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:21:00.348  INFO 20930 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:21:00.503  INFO 20930 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:21:00.595  INFO 20930 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:21:01.084  INFO 20930 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:21:01.091  INFO 20930 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:21:01.121  WARN 20930 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:21:01.455  INFO 20930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:21:01.455  INFO 20930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:21:01.455  INFO 20930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:21:01.455  INFO 20930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:21:01.455  INFO 20930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:21:01.455  INFO 20930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:21:01.455  INFO 20930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:21:01.455  INFO 20930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:21:01.482  INFO 20930 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5366575d, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a02ebe0, org.springframework.security.web.header.HeaderWriterFilter@620572db, org.springframework.security.web.authentication.logout.LogoutFilter@69d58731, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53918b5e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d7e2795, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1939a394, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b6cad77, org.springframework.security.web.session.SessionManagementFilter@47d9c01, org.springframework.security.web.access.ExceptionTranslationFilter@7cecab19, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67593f7b]
+2019-11-25 00:21:01.587  INFO 20930 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:21:01.807  INFO 20930 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:21:01.809  INFO 20930 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 3.185 seconds (JVM running for 3.652)
+2019-11-25 00:21:32.428  INFO 20930 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:21:32.429  INFO 20930 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:21:32.436  INFO 20930 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-11-25 00:21:37.466  INFO 20930 --- [http-nio-8080-exec-2] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:22:21.153  INFO 20930 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:23:14.776  INFO 20930 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:23:14.778  INFO 20930 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:23:14.782  INFO 20930 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:23:14.785  INFO 20930 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:23:18.673  INFO 21156 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 21156 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:23:18.681  INFO 21156 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:23:19.576  INFO 21156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:23:19.653  INFO 21156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 1 repository interfaces.
+2019-11-25 00:23:20.368  INFO 21156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:23:20.650  INFO 21156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:23:20.661  INFO 21156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:23:20.662  INFO 21156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:23:20.740  INFO 21156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:23:20.740  INFO 21156 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1921 ms
+2019-11-25 00:23:20.866  INFO 21156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:23:20.956  INFO 21156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:23:21.095  INFO 21156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:23:21.175  INFO 21156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:23:21.425  INFO 21156 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:23:21.570  INFO 21156 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:23:22.336  INFO 21156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:23:22.348  INFO 21156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:23:22.399  WARN 21156 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:23:22.966  INFO 21156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:23:22.966  INFO 21156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:23:22.966  INFO 21156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:23:22.966  INFO 21156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:23:22.966  INFO 21156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:23:22.966  INFO 21156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:23:22.966  INFO 21156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:23:22.967  INFO 21156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:23:23.011  INFO 21156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e26987b, org.springframework.security.web.context.SecurityContextPersistenceFilter@49f2646, org.springframework.security.web.header.HeaderWriterFilter@a7ae340, org.springframework.security.web.authentication.logout.LogoutFilter@70805849, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@79273a4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c048b30, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b289535, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50bb1c1f, org.springframework.security.web.session.SessionManagementFilter@335972a5, org.springframework.security.web.access.ExceptionTranslationFilter@e2c627e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4780341]
+2019-11-25 00:23:23.173  INFO 21156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:23:23.466  INFO 21156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:23:23.468  INFO 21156 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 5.349 seconds (JVM running for 6.12)
+2019-11-25 00:23:28.262  INFO 21156 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:23:28.262  INFO 21156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:23:28.271  INFO 21156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-11-25 00:23:33.147  INFO 21156 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:31:36.634  INFO 21156 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:31:36.635  INFO 21156 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:31:36.637  INFO 21156 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:31:36.639  INFO 21156 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:31:39.331  INFO 22071 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 22071 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:31:39.333  INFO 22071 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:31:39.829  INFO 22071 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:31:39.874  INFO 22071 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 1 repository interfaces.
+2019-11-25 00:31:40.270  INFO 22071 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:31:40.458  INFO 22071 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:31:40.464  INFO 22071 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:31:40.465  INFO 22071 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:31:40.517  INFO 22071 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:31:40.518  INFO 22071 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1130 ms
+2019-11-25 00:31:40.603  INFO 22071 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:31:40.675  INFO 22071 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:31:40.800  INFO 22071 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:31:40.867  INFO 22071 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:31:41.046  INFO 22071 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:31:41.135  INFO 22071 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:31:41.627  INFO 22071 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:31:41.633  INFO 22071 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:31:41.671  WARN 22071 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:31:42.045  INFO 22071 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:31:42.046  INFO 22071 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:31:42.046  INFO 22071 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:31:42.046  INFO 22071 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:31:42.046  INFO 22071 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:31:42.046  INFO 22071 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:31:42.046  INFO 22071 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:31:42.046  INFO 22071 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:31:42.072  INFO 22071 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f428e6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@2095c331, org.springframework.security.web.header.HeaderWriterFilter@578d472a, org.springframework.security.web.authentication.logout.LogoutFilter@6207145c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@24d7657b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b795db7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55f6f965, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72e49f6a, org.springframework.security.web.session.SessionManagementFilter@54b2d002, org.springframework.security.web.access.ExceptionTranslationFilter@7296fe0b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3595086b]
+2019-11-25 00:31:42.195  INFO 22071 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:31:42.381  INFO 22071 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:31:42.382  INFO 22071 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 3.397 seconds (JVM running for 3.902)
+2019-11-25 00:31:49.998  INFO 22071 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:31:49.999  INFO 22071 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:31:50.009  INFO 22071 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-11-25 00:31:57.264  WARN 22071 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2019-11-25 00:36:08.197  INFO 22071 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:36:08.198  INFO 22071 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:36:08.200  INFO 22071 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:36:08.202  INFO 22071 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:36:10.421  INFO 22423 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 22423 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:36:10.423  INFO 22423 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:36:10.917  INFO 22423 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:36:10.956  INFO 22423 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 1 repository interfaces.
+2019-11-25 00:36:11.328  INFO 22423 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:36:11.534  INFO 22423 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:36:11.541  INFO 22423 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:36:11.541  INFO 22423 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:36:11.592  INFO 22423 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:36:11.593  INFO 22423 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1108 ms
+2019-11-25 00:36:11.662  INFO 22423 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:36:11.714  INFO 22423 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:36:11.796  INFO 22423 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:36:11.852  INFO 22423 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:36:12.018  INFO 22423 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:36:12.095  INFO 22423 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:36:12.527  INFO 22423 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:36:12.532  INFO 22423 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:36:12.567  WARN 22423 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:36:12.889  INFO 22423 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:36:12.890  INFO 22423 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:36:12.890  INFO 22423 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:36:12.890  INFO 22423 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:36:12.890  INFO 22423 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:36:12.890  INFO 22423 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:36:12.890  INFO 22423 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:36:12.890  INFO 22423 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:36:12.917  INFO 22423 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5dd3727c, org.springframework.security.web.context.SecurityContextPersistenceFilter@b6136eb, org.springframework.security.web.header.HeaderWriterFilter@68f9e807, org.springframework.security.web.authentication.logout.LogoutFilter@f42336c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@14d81f2c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73234691, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5cbe72b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@774013dc, org.springframework.security.web.session.SessionManagementFilter@3dfc59c5, org.springframework.security.web.access.ExceptionTranslationFilter@3355b8ff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@87220f1]
+2019-11-25 00:36:13.022  INFO 22423 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:36:13.203  INFO 22423 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:36:13.204  INFO 22423 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 3.105 seconds (JVM running for 3.578)
+2019-11-25 00:36:19.686  INFO 22423 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:36:19.687  INFO 22423 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:36:19.693  INFO 22423 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:36:19.695  INFO 22423 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:36:21.922  INFO 22542 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 22542 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:36:21.925  INFO 22542 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:36:22.410  INFO 22542 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:36:22.452  INFO 22542 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 1 repository interfaces.
+2019-11-25 00:36:22.823  INFO 22542 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:36:22.994  INFO 22542 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:36:23.000  INFO 22542 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:36:23.001  INFO 22542 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:36:23.051  INFO 22542 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:36:23.051  INFO 22542 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1067 ms
+2019-11-25 00:36:23.120  INFO 22542 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:36:23.170  INFO 22542 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:36:23.245  INFO 22542 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:36:23.302  INFO 22542 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:36:23.465  INFO 22542 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:36:23.543  INFO 22542 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:36:24.001  INFO 22542 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:36:24.007  INFO 22542 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:36:24.041  WARN 22542 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:36:24.366  INFO 22542 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:36:24.366  INFO 22542 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:36:24.366  INFO 22542 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:36:24.366  INFO 22542 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:36:24.366  INFO 22542 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:36:24.366  INFO 22542 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:36:24.366  INFO 22542 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:36:24.366  INFO 22542 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:36:24.390  INFO 22542 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54e94de9, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d0dad12, org.springframework.security.web.header.HeaderWriterFilter@be1c08a, org.springframework.security.web.authentication.logout.LogoutFilter@4cf01c41, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@762cdf46, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58a8ea6f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a5066f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cff03cf, org.springframework.security.web.session.SessionManagementFilter@3d7b3b18, org.springframework.security.web.access.ExceptionTranslationFilter@2bc2e022, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e171f93]
+2019-11-25 00:36:24.510  INFO 22542 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:36:24.682  INFO 22542 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:36:24.684  INFO 22542 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 3.092 seconds (JVM running for 3.584)
+2019-11-25 00:36:43.876  INFO 22542 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:36:43.877  INFO 22542 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:36:43.883  INFO 22542 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-11-25 00:36:49.508  INFO 22542 --- [http-nio-8080-exec-3] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:37:15.951  INFO 22542 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:37:15.953  INFO 22542 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:37:15.955  INFO 22542 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:37:15.960  INFO 22542 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:37:18.527  INFO 22730 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 22730 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:37:18.530  INFO 22730 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:37:18.991  INFO 22730 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:37:19.039  INFO 22730 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 1 repository interfaces.
+2019-11-25 00:37:19.405  INFO 22730 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:37:19.584  INFO 22730 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:37:19.590  INFO 22730 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:37:19.590  INFO 22730 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:37:19.639  INFO 22730 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:37:19.639  INFO 22730 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1060 ms
+2019-11-25 00:37:19.711  INFO 22730 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:37:19.766  INFO 22730 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:37:19.845  INFO 22730 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:37:19.900  INFO 22730 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:37:20.036  INFO 22730 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:37:20.111  INFO 22730 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:37:20.533  INFO 22730 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:37:20.539  INFO 22730 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:37:20.566  WARN 22730 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:37:20.899  INFO 22730 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:37:20.900  INFO 22730 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:37:20.900  INFO 22730 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:37:20.900  INFO 22730 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:37:20.900  INFO 22730 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:37:20.900  INFO 22730 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:37:20.900  INFO 22730 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:37:20.900  INFO 22730 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:37:20.928  INFO 22730 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70f91ae3, org.springframework.security.web.context.SecurityContextPersistenceFilter@432f4626, org.springframework.security.web.header.HeaderWriterFilter@4ab86b2a, org.springframework.security.web.authentication.logout.LogoutFilter@5d7ff311, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4b7e4d14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c79ca55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60a99f3d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@601d9f3a, org.springframework.security.web.session.SessionManagementFilter@2ac9e53c, org.springframework.security.web.access.ExceptionTranslationFilter@11c999da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@60b553f]
+2019-11-25 00:37:21.037  INFO 22730 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:37:21.228  INFO 22730 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:37:21.230  INFO 22730 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 2.995 seconds (JVM running for 3.456)
+2019-11-25 00:37:42.240  INFO 22730 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:37:42.241  INFO 22730 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:37:42.249  INFO 22730 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-11-25 00:37:47.765  INFO 22730 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:38:38.298  INFO 22730 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:38:38.299  INFO 22730 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:38:38.301  INFO 22730 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:38:38.303  INFO 22730 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 00:38:42.200  INFO 22866 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 22866 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 00:38:42.203  INFO 22866 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 00:38:43.041  INFO 22866 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 00:38:43.125  INFO 22866 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 1 repository interfaces.
+2019-11-25 00:38:43.773  INFO 22866 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 00:38:44.047  INFO 22866 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 00:38:44.056  INFO 22866 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 00:38:44.056  INFO 22866 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 00:38:44.145  INFO 22866 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 00:38:44.145  INFO 22866 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1835 ms
+2019-11-25 00:38:44.250  INFO 22866 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 00:38:44.345  INFO 22866 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 00:38:44.490  INFO 22866 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 00:38:44.581  INFO 22866 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 00:38:44.822  INFO 22866 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 00:38:44.963  INFO 22866 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 00:38:45.738  INFO 22866 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 00:38:45.748  INFO 22866 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:38:45.798  WARN 22866 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 00:38:46.385  INFO 22866 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 00:38:46.385  INFO 22866 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 00:38:46.385  INFO 22866 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 00:38:46.385  INFO 22866 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 00:38:46.385  INFO 22866 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 00:38:46.385  INFO 22866 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 00:38:46.386  INFO 22866 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 00:38:46.386  INFO 22866 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 00:38:46.432  INFO 22866 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@299786b1, org.springframework.security.web.context.SecurityContextPersistenceFilter@8ce3f27, org.springframework.security.web.header.HeaderWriterFilter@58583a2d, org.springframework.security.web.authentication.logout.LogoutFilter@34070bd2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@687e561b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6802d023, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@775edae0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75f8d9b0, org.springframework.security.web.session.SessionManagementFilter@2d172c7, org.springframework.security.web.access.ExceptionTranslationFilter@32d1d6c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1468e880]
+2019-11-25 00:38:46.615  INFO 22866 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:38:46.972  INFO 22866 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 00:38:46.975  INFO 22866 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 5.309 seconds (JVM running for 6.028)
+2019-11-25 00:38:55.897  INFO 22866 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 00:38:55.898  INFO 22866 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 00:38:55.906  INFO 22866 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-11-25 00:39:03.459  INFO 22866 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 00:41:32.196  INFO 22866 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 00:41:32.197  INFO 22866 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 00:41:32.200  INFO 22866 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 00:41:32.204  INFO 22866 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 11:28:09.847  INFO 13771 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 13771 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 11:28:09.851  INFO 13771 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 11:28:10.340  INFO 13771 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 11:28:10.385  INFO 13771 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
+2019-11-25 11:28:10.799  INFO 13771 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 11:28:11.027  INFO 13771 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 11:28:11.036  INFO 13771 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 11:28:11.037  INFO 13771 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 11:28:11.094  INFO 13771 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 11:28:11.094  INFO 13771 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1164 ms
+2019-11-25 11:28:11.175  INFO 13771 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 11:28:11.200 ERROR 13771 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:280) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.Driver.makeConnection(Driver.java:458) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.Driver.connect(Driver.java:260) ~[postgresql-42.2.8.jar:42.2.8]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) [HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) [HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.1.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:47) [spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202) [spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.createSchema(DataSourceInitializer.java:101) [spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.afterPropertiesSet(DataSourceInitializerInvoker.java:63) [spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:227) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1155) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:416) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:349) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:342) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerPostProcessor.postProcessAfterInitialization(DataSourceInitializerPostProcessor.java:52) ~[spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:874) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:778) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:226) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:400) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at com.minhhung.CertificateEducationApplication.main(CertificateEducationApplication.java:16) ~[classes/:na]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_222]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_222]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_222]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_222]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_222]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_222]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:75) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:91) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192) ~[postgresql-42.2.8.jar:42.2.8]
+	... 72 common frames omitted
+
+2019-11-25 11:28:11.205  WARN 13771 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2019-11-25 11:28:11.207  INFO 13771 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-11-25 11:28:11.217  INFO 13771 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-25 11:28:11.223 ERROR 13771 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:787) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:226) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:400) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at com.minhhung.CertificateEducationApplication.main(CertificateEducationApplication.java:16) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:874) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:778) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 28 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:227) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1155) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:416) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:349) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:342) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerPostProcessor.postProcessAfterInitialization(DataSourceInitializerPostProcessor.java:52) ~[spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:59) ~[spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202) ~[spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.createSchema(DataSourceInitializer.java:101) ~[spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.afterPropertiesSet(DataSourceInitializerInvoker.java:63) ~[spring-boot-autoconfigure-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 52 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:47) ~[spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 57 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:280) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.Driver.makeConnection(Driver.java:458) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.Driver.connect(Driver.java:260) ~[postgresql-42.2.8.jar:42.2.8]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.1.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 58 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_222]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_222]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_222]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_222]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_222]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_222]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:75) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:91) ~[postgresql-42.2.8.jar:42.2.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192) ~[postgresql-42.2.8.jar:42.2.8]
+	... 72 common frames omitted
+
+2019-11-25 11:29:07.603  INFO 16241 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 16241 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 11:29:07.606  INFO 16241 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 11:29:08.242  INFO 16241 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 11:29:08.303  INFO 16241 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 1 repository interfaces.
+2019-11-25 11:29:08.892  INFO 16241 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 11:29:09.104  INFO 16241 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 11:29:09.111  INFO 16241 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 11:29:09.111  INFO 16241 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 11:29:09.163  INFO 16241 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 11:29:09.163  INFO 16241 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1499 ms
+2019-11-25 11:29:09.240  INFO 16241 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 11:29:09.314  INFO 16241 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 11:29:09.415  INFO 16241 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 11:29:09.492  INFO 16241 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 11:29:09.720  INFO 16241 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 11:29:09.825  INFO 16241 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 11:29:10.453  INFO 16241 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 11:29:10.462  INFO 16241 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 11:29:10.502  WARN 16241 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 11:29:11.036  INFO 16241 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 11:29:11.036  INFO 16241 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 11:29:11.036  INFO 16241 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 11:29:11.036  INFO 16241 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 11:29:11.036  INFO 16241 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 11:29:11.036  INFO 16241 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 11:29:11.036  INFO 16241 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 11:29:11.036  INFO 16241 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 11:29:11.087  INFO 16241 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b00d59, org.springframework.security.web.context.SecurityContextPersistenceFilter@39c5a105, org.springframework.security.web.header.HeaderWriterFilter@1a3c4b3e, org.springframework.security.web.authentication.logout.LogoutFilter@651cedfb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@49f2646, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@513fab1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@308c65e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c048b30, org.springframework.security.web.session.SessionManagementFilter@3be46d9c, org.springframework.security.web.access.ExceptionTranslationFilter@45f0038, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35cbeb54]
+2019-11-25 11:29:11.248  INFO 16241 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 11:29:11.705  INFO 16241 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 11:29:11.711  INFO 16241 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 4.491 seconds (JVM running for 5.145)
+2019-11-25 11:29:53.408  INFO 16241 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 11:29:53.409  INFO 16241 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 11:29:53.425  INFO 16241 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-11-25 11:30:02.458  INFO 16241 --- [http-nio-8080-exec-2] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 12:52:14.216  INFO 16241 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 12:52:14.218  INFO 16241 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 12:52:14.221  INFO 16241 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 12:52:14.245  INFO 16241 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 12:52:17.705  INFO 26955 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 26955 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 12:52:17.710  INFO 26955 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 12:52:18.330  INFO 26955 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 12:52:18.382  INFO 26955 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 1 repository interfaces.
+2019-11-25 12:52:18.906  INFO 26955 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 12:52:19.120  INFO 26955 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 12:52:19.127  INFO 26955 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 12:52:19.127  INFO 26955 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 12:52:19.185  INFO 26955 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 12:52:19.186  INFO 26955 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1404 ms
+2019-11-25 12:52:19.281  INFO 26955 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 12:52:19.366  INFO 26955 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 12:52:19.461  INFO 26955 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 12:52:19.523  INFO 26955 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 12:52:19.688  INFO 26955 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 12:52:19.785  INFO 26955 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 12:52:19.936  WARN 26955 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.minhhung.model.StuConf
+2019-11-25 12:52:19.936  INFO 26955 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 12:52:19.938  INFO 26955 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 12:52:19.942  INFO 26955 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-11-25 12:52:19.953  INFO 26955 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-25 12:52:19.962 ERROR 26955 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.minhhung.model.StuConf
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at com.minhhung.CertificateEducationApplication.main(CertificateEducationApplication.java:16) [classes/:na]
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.minhhung.model.StuConf
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:266) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:781) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:254) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:230) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:273) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1214) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1245) ~[hibernate-core-5.4.8.Final.jar:5.4.8.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 16 common frames omitted
+
+2019-11-25 12:53:25.402  INFO 7608 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 7608 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 12:53:25.405  INFO 7608 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 12:53:26.096  INFO 7608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 12:53:26.149  INFO 7608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 1 repository interfaces.
+2019-11-25 12:53:26.643  INFO 7608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 12:53:26.848  INFO 7608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 12:53:26.857  INFO 7608 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 12:53:26.858  INFO 7608 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 12:53:26.913  INFO 7608 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 12:53:26.913  INFO 7608 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1421 ms
+2019-11-25 12:53:27.003  INFO 7608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 12:53:27.082  INFO 7608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 12:53:27.183  INFO 7608 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 12:53:27.246  INFO 7608 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 12:53:27.449  INFO 7608 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 12:53:27.561  INFO 7608 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 12:53:28.126  INFO 7608 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 12:53:28.133  INFO 7608 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 12:53:28.168  WARN 7608 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 12:53:28.601  INFO 7608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 12:53:28.602  INFO 7608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 12:53:28.602  INFO 7608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 12:53:28.602  INFO 7608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 12:53:28.602  INFO 7608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 12:53:28.602  INFO 7608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 12:53:28.602  INFO 7608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 12:53:28.603  INFO 7608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 12:53:28.635  INFO 7608 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12723c5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@73d83141, org.springframework.security.web.header.HeaderWriterFilter@3aca2579, org.springframework.security.web.authentication.logout.LogoutFilter@16d4024e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7404aff2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33356666, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@321c2a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56a09a5c, org.springframework.security.web.session.SessionManagementFilter@651cedfb, org.springframework.security.web.access.ExceptionTranslationFilter@3ad2883a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77476fcf]
+2019-11-25 12:53:28.761  INFO 7608 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 12:53:29.051  INFO 7608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 12:53:29.053  INFO 7608 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 4.123 seconds (JVM running for 4.808)
+2019-11-25 12:53:30.058  INFO 7608 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 12:53:30.059  INFO 7608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 12:53:30.064  INFO 7608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-11-25 12:53:56.105  INFO 7608 --- [http-nio-8080-exec-3] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 12:59:07.645  INFO 7608 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 12:59:07.646  INFO 7608 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 12:59:07.649  INFO 7608 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 12:59:07.652  INFO 7608 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-25 12:59:11.137  INFO 8994 --- [main] c.m.CertificateEducationApplication      : Starting CertificateEducationApplication on minhhung-ThinkPad-T480 with PID 8994 (/home/minhhung/Language_and_Tech/java-real-projects/certificate-education/target/classes started by minhhung in /home/minhhung/Language_and_Tech/java-real-projects/certificate-education)
+2019-11-25 12:59:11.144  INFO 8994 --- [main] c.m.CertificateEducationApplication      : No active profile set, falling back to default profiles: default
+2019-11-25 12:59:11.788  INFO 8994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 12:59:11.837  INFO 8994 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40ms. Found 1 repository interfaces.
+2019-11-25 12:59:12.300  INFO 8994 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 12:59:12.508  INFO 8994 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 12:59:12.518  INFO 8994 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 12:59:12.519  INFO 8994 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-25 12:59:12.584  INFO 8994 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 12:59:12.585  INFO 8994 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1329 ms
+2019-11-25 12:59:12.671  INFO 8994 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 12:59:12.738  INFO 8994 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 12:59:12.857  INFO 8994 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-25 12:59:12.924  INFO 8994 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-25 12:59:13.098  INFO 8994 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-25 12:59:13.196  INFO 8994 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-11-25 12:59:13.820  INFO 8994 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-25 12:59:13.828  INFO 8994 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 12:59:13.865  WARN 8994 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 12:59:14.289  INFO 8994 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-11-25 12:59:14.290  INFO 8994 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-11-25 12:59:14.290  INFO 8994 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-11-25 12:59:14.290  INFO 8994 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/jslib/**'], []
+2019-11-25 12:59:14.290  INFO 8994 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-11-25 12:59:14.290  INFO 8994 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-11-25 12:59:14.290  INFO 8994 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/js/**'], []
+2019-11-25 12:59:14.290  INFO 8994 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/bootstrap/3.3.7/css/**'], []
+2019-11-25 12:59:14.332  INFO 8994 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2210e466, org.springframework.security.web.context.SecurityContextPersistenceFilter@68f69ca3, org.springframework.security.web.header.HeaderWriterFilter@7e76a66f, org.springframework.security.web.authentication.logout.LogoutFilter@e1a150c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2bc2e022, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b058bfd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79144d0e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@be1c08a, org.springframework.security.web.session.SessionManagementFilter@5c5f12e, org.springframework.security.web.access.ExceptionTranslationFilter@1e7d3d87, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47fca3cc]
+2019-11-25 12:59:14.454  INFO 8994 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 12:59:14.680  INFO 8994 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 12:59:14.682  INFO 8994 --- [main] c.m.CertificateEducationApplication      : Started CertificateEducationApplication in 4.01 seconds (JVM running for 4.681)
+2019-11-25 12:59:37.951  INFO 8994 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 12:59:37.952  INFO 8994 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 12:59:37.959  INFO 8994 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-11-25 13:00:02.868  INFO 8994 --- [http-nio-8080-exec-4] com.minhhung.service.CustomUserService   : Login successfully: User{id='Student0', email='student@gmail.com', password='$2a$12$0Eds/bXn0ZWiRIjpNS0yL.yuuI3fHudFHcFpBu/RMhIvexDSwvmLe', firstName='Hung', lastName='Nguyen', role='ROLE_STUDENT', state='1'}
+2019-11-25 13:51:51.666  INFO 8994 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 13:51:51.667  INFO 8994 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 13:51:51.673  INFO 8994 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-25 13:51:51.681  INFO 8994 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

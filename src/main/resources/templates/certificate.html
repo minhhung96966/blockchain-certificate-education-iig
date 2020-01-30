@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div style="margin-top: 20px">
+        <h5 style="text-align: center">SOCIALIST REPUBLIC OF VIET NAM</h5>
+        <h5 style="text-align: center; text-decoration: underline">Independence - Freedom - Happiness</h5>
+    </div>
+
+    <div style="margin-top: 20px">
+        <h4 style="text-align: center">VIET NAM NATIONAL UNIVERSITY HO CHI MINH CITY</h4>
+        <h4 style="font-weight: bold; text-align: center">UNIVERSITY OF INFOMATION TECHNOLOGY</h4>
+    </div>
+
+
+    <div style="margin-top: 20px">
+        <p style="text-align: center">has conferred the degree of</p>
+        <h2 style="color: red; text-align: center">[[${certTemplate.badge.name}]]</h2>
+        <h3 style="font-weight: bold; text-align: center">in [[${certTemplate.badge.description}]]</h3>
+    </div>
+
+
+    <div style="width:50%; margin: auto">
+        <span>Upon: </span><span style="text-transform: uppercase; font-weight: bold">[[${cert.recipientProfile.name}]]</span>
+    </div>
+   <div style="width: 50%; margin: auto">
+       <span>Degree classification: </span><span style="font-weight: bold">[[${cert.classification}]]</span>
+   </div>
+    <div style="width: 50%; margin: auto">
+        <span>Mode of study: </span><span style="font-weight: bold">Full-time</span>
+    </div>
+
+    <div style="text-align: center; justify-content: center">
+        <img th:src="${qrcode}" width="200" height="200">
+    </div>
+
+
+</body>
+
+</html>
